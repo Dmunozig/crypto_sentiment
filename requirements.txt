@@ -8,6 +8,8 @@ wheel>=0.29
 numpy
 pandas
 scikit-learn
+jupyter
+matplotlib
 
 # tests/linter
 black
@@ -21,6 +23,7 @@ gcsfs
 google-cloud-storage
 mlflow
 s3fs
+requests
 
 # utilities
 six>=1.14
