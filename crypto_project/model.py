@@ -1,6 +1,13 @@
 from fbprophet import Prophet
 from crypto_project.data import price_and_indexes
 
+
+# split the dataset into train and test dataframes
+def train_test_split(dataframe):
+    train  = dataframe.iloc[:-1]
+    test = dataframe.iloc[-1:]
+    return train, test
+
 def fit_model(dataframe,local=True):
     if local==True:
         # instatiate the model   
@@ -29,7 +36,7 @@ def fit_model(dataframe,local=True):
 
 
 
-def future_dataframe(fitted_model, local=True):
+def future_dataframe(dataframe,fitted_model, local=True):
     if local==True:
         # define the horizon of the prediction
         horizon = 1
@@ -65,6 +72,6 @@ if __name__ == "__main__":
     # fit
     fitted_model = fit_model(dataframe)
     # make future dataframe
-    model_future = future_dataframe(fitted_model)
+    model_future = future_dataframe(dataframe,fitted_model)
     # predict
     model_predict(fitted_model, model_future)
