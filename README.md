@@ -1,8 +1,17 @@
-# Data analysis
-- Document here the project: crypto_project
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+# Crypto Sentiment
+A little info about your project and/ or overview that explains what the project is about.
+# Motivation
+A short description of the motivation behind the creation and maintenance of the project. 
+# Details
+- Data Source: API
+    - https://www.coindesk.com/coindesk-api
+    - https://alternative.me/crypto/fear-and-greed-index/
+    - http://api-dev.augmento.ai/v0.1/documentation#introduction
+- Models Used: Prophet & Sarimax
+- Deployment: GCP & Heroku
+- Front-End Web Framework: Streamlit (link to the repository below)
+    - link here
+
 
 Please document the project the better you can.
 
