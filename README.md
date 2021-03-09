@@ -12,10 +12,14 @@ The data was acquired from 3 different API's:
 - http://api-dev.augmento.ai/v0.1/documentation#introduction
 
 # Models
-Prophet & Sarimax
-comparison
-model performance
-features
+- Prophet & Sarimax
+- comparison
+- model performance
+- features
+
+# Backtesting
+- explaing how we backtested our strategy and what are the signals to buy and sell
+- results comparison between a strategy with only the price and with the sentiment features
 
 # Deployment
 
