@@ -47,6 +47,8 @@ def future_dataframe(dataframe,fitted_model, local=True):
         model_future["twitter_score"] = dataframe["twitter_score"] 
         model_future["reddit_score"] = dataframe["reddit_score"] 
         model_future["Fear&Greed"] = dataframe["Fear&Greed"]
+        # filling the future sentiment score with the previous day in order to be able to predict. Prophet is not able to predict with NaN values 
+        model_future = model_future.fillna(method="ffill")
         return model_future
 
     if local==False:
@@ -56,6 +58,8 @@ def future_dataframe(dataframe,fitted_model, local=True):
         model_future = fitted_model.make_future_dataframe(horizon)
         # create the regressors/features columns
         model_future["Fear&Greed"] = dataframe["Fear&Greed"]
+        # filling the future sentiment score with the previous day in order to be able to predict. Prophet is not able to predict with NaN values 
+        model_future = model_future.fillna(method="ffill")
         return model_future
 
 #predict
