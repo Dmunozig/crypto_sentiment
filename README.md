@@ -1,15 +1,28 @@
 # Crypto Sentiment
-A little info about your project and/ or overview that explains what the project is about.
+This project is trying to predict the bitcoin price using sentiment analysis as an additional feature because the price is mainly linked to emotion/sentiment.   
+
 # Motivation
-A short description of the motivation behind the creation and maintenance of the project. 
-# Details
-- Data Source: API
+As bitcoin prices is extremelly volatile due to its high speculative nature. A big part of the trading is backed by emotions and not fundamentals and logic. This project tries to capitalize on this inherently strong sentiment investing that makes up a majority of the trading of bitcoin. 
+
+
+# Data Source 
+The data was acquired from 3 different API's:
     - https://www.coindesk.com/coindesk-api
     - https://alternative.me/crypto/fear-and-greed-index/
     - http://api-dev.augmento.ai/v0.1/documentation#introduction
-- Models Used: Prophet & Sarimax
-- Deployment: GCP & Heroku
-- Front-End Web Framework: Streamlit (link to the repository below)
+
+# Models
+Prophet & Sarimax
+comparison
+model performance
+features
+
+# Deployment
+
+GCP & Heroku
+
+# Front-End Web Framework
+Streamlit (link to the repository below)
     - link here
 
 
