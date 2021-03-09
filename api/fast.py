@@ -16,24 +16,23 @@ app.add_middleware(
 )
 
 
-@app.get("/predict")
+@app.get("/")
 def predict():
 
     # get data
     dataframe = price_and_indexes(local=False)
-    # split dataframe into train and test
-    train, test = train_test_split(dataframe)
     # fit
-    fitted_model = fit_model(train,local=False)
+    fitted_model = fit_model(dataframe,local=False)
     # make future dataframe
-    model_future = future_dataframe(train, fitted_model,local=False)
+    model_future = future_dataframe(dataframe, fitted_model,local=False)
     # predict
     prediction = model_predict(fitted_model, model_future)
     #compare to the current bitcoin price
     current_btc_price = dataframe["y"][-1:].values[0]
-    if prediction < current_btc_price:
+    if prediction > current_btc_price:
+        recommendation = "Buy"
+    else:
         recommendation = "Sell"
-    recommendation = "Buy"
     
     return {"prediction": prediction,
             "current_btc_price": current_btc_price,
