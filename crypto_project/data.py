@@ -2,29 +2,38 @@ import numpy as np
 import pandas as pd 
 import requests
 from datetime import date
+import os
 
 """These function retrieve our API data and return dataframes"""
 
 def price_and_indexes(local=True):
-    
     if local==True:
+        # create the path for the file
+        data_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "..",'data')
         # Historic Bitcoin Prices
-        btc_data = pd.read_csv('~/code/Dmunozig/crypto_project/data/bitcoinprice_fixed.csv') # Will these paths works if deployed?
+        btc_data = pd.read_csv(os.path.join(data_path,"bitcoinprice_fixed.csv"))
         btc_data.columns=['timestamp','btc_price']
         btc_data = btc_data.set_index('timestamp')
 
         # Fear & Greed index
-        fear_greed_data = pd.read_csv('~/code/Dmunozig/crypto_project/data/Fear_Greed_df.csv')
+        fear_greed_data = pd.read_csv(os.path.join(data_path,"Fear_Greed_df.csv"))
         fear_greed_data = fear_greed_data.set_index('timestamp')
 
         # Augmento index
-        augmento_data = pd.read_csv('~/code/Dmunozig/crypto_project/data/augmento_scores_df.csv')
+        augmento_data = pd.read_csv(os.path.join(data_path,"augmento_scores_df.csv"))
         augmento_data = augmento_data.rename(columns={"datetime": "timestamp"})
         augmento_data = augmento_data.set_index('timestamp')
 
         complete_df = btc_data.join(fear_greed_data,on='timestamp',how='inner').join(augmento_data,on='timestamp',how='inner')
         complete_df.fillna(value=complete_df['twitter_score'].mean(), inplace=True)
 
+        # we are going to set the index date as a column in order to train with prophet
+        #complete_df["timestamp"] = complete_df.index
+        complete_df.reset_index(level=0, inplace=True)
+        complete_df = complete_df[["timestamp","btc_price","Fear&Greed","BTC_score","twitter_score","reddit_score"]]
+        complete_df.columns = ["ds","y","Fear&Greed","BTC_score","twitter_score","reddit_score"]
+        complete_df.drop_duplicates(inplace=True)
+        complete_df.reset_index(inplace=True)
         return complete_df
 
         
