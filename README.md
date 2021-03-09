@@ -7,9 +7,9 @@ As bitcoin prices is extremelly volatile due to its high speculative nature. A b
 
 # Data Source 
 The data was acquired from 3 different API's:
-    - https://www.coindesk.com/coindesk-api
-    - https://alternative.me/crypto/fear-and-greed-index/
-    - http://api-dev.augmento.ai/v0.1/documentation#introduction
+- https://www.coindesk.com/coindesk-api
+- https://alternative.me/crypto/fear-and-greed-index/
+- http://api-dev.augmento.ai/v0.1/documentation#introduction
 
 # Models
 Prophet & Sarimax
