@@ -27,7 +27,7 @@ GCP & Heroku
 
 # Front-End Web Framework
 Streamlit (link to the repository below)
-    - https://github.com/Dmunozig/Kryptonite-app
+- https://github.com/Dmunozig/Kryptonite-app
 
 
 Please document the project the better you can.
