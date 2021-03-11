@@ -1,5 +1,5 @@
 # Project Name: Crypto Sentiment
-## Objective
+# Objective
 This project is trying to predict the bitcoin price using sentiment analysis as an additional feature because the price is mainly linked to emotion/sentiment.   
 
 # Motivation
