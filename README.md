@@ -56,9 +56,10 @@ Streamlit (link to the repository below)
 
 ## Data Engineering
 1. Package all the code into python files in order to deploy it.
+2. Use Docker containers to deploy the back-end(prediciton API) on GCP.
+3. Create the front-end with Streamlit and deploy it on Heroku.
 
-## Deployment
-1. Use Docker containers to deploy 
+
 
 # Startup the project
 
