@@ -1,9 +1,19 @@
-# Crypto Sentiment
+# Project Name: Crypto Sentiment
+## Objective
 This project is trying to predict the bitcoin price using sentiment analysis as an additional feature because the price is mainly linked to emotion/sentiment.   
 
 # Motivation
 As bitcoin prices is extremelly volatile due to its high speculative nature. A big part of the trading is backed by emotions and not fundamentals and logic. This project tries to capitalize on this inherently strong sentiment investing that makes up a majority of the trading of bitcoin. 
 
+# Team
+- Diego Munozig
+    - https://github.com/Dmunozig
+- Olavo W.S. Figueiredo
+    - https://github.com/olavowsf
+- Yassine Rkaibi
+    - https://github.com/rkaibi
+- Imamul Alam Majumder
+    - https://github.com/theimo92
 
 # Data Source 
 The data was acquired from 3 different API's:
@@ -11,15 +21,10 @@ The data was acquired from 3 different API's:
 - https://alternative.me/crypto/fear-and-greed-index/
 - http://api-dev.augmento.ai/v0.1/documentation#introduction
 
-# Models
-- Prophet & Sarimax
-- comparison
-- model performance
-- features
-
-# Backtesting
-- explaing how we backtested our strategy and what are the signals to buy and sell
-- results comparison between a strategy with only the price and with the sentiment features
+# Model
+- Prophet
+# Other model tested:
+- Sarimax
 
 # Deployment
 
@@ -29,8 +34,31 @@ GCP & Heroku
 Streamlit (link to the repository below)
 - https://github.com/Dmunozig/Kryptonite-app
 
+# Project Description
 
-Please document the project the better you can.
+## Data
+1. Identify datasets to use as exogenous features for the Prophet model.
+2. Retrieve the data from chosen API's
+3. Clean and explore the data.
+
+## Modelling
+1. Choose the period to train and test the model.
+2. Tuning the model.
+
+## Predict
+1. Make prediction for the next day.
+
+
+## Backtesting
+1. Create the buy and sell signal for the strategy.
+2. Implement it across different time periods.
+3. Compare strategy using only price with and without sentiment scores.
+
+## Data Engineering
+1. Package all the code into python files in order to deploy it.
+
+## Deployment
+1. Use Docker containers to deploy 
 
 # Startup the project
 
