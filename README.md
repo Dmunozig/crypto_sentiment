@@ -45,7 +45,7 @@ Streamlit (link to the repository below)
 1. Choose the period to train and test the model.
 2. Tuning the model.
 
-## Predict
+## Predicting
 1. Make prediction for the next day.
 
 
