@@ -6,7 +6,7 @@ This project is trying to predict the bitcoin price using sentiment analysis as 
 As bitcoin prices is extremelly volatile due to its high speculative nature. A big part of the trading is backed by emotions and not fundamentals and logic. This project tries to capitalize on this inherently strong sentiment investing that makes up a majority of the trading of bitcoin. 
 
 # Team
-- Diego Munozig
+- Diego Munoz
     - https://github.com/Dmunozig
 - Olavo W.S. Figueiredo
     - https://github.com/olavowsf
