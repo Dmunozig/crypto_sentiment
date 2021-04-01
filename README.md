@@ -1,9 +1,9 @@
 # Project Name: Crypto Sentiment
 # Objective
-This project is trying to predict the bitcoin price using sentiment analysis as an additional feature because the price is mainly linked to emotion/sentiment.   
+This project predicts bitcoin prices using sentiment analysis as an additional feature because the price is mainly linked to emotion/sentiment.   
 
 # Motivation
-As bitcoin prices is extremelly volatile due to its high speculative nature. A big part of the trading is backed by emotions and not fundamentals and logic. This project tries to capitalize on this inherently strong sentiment investing that makes up a majority of the trading of bitcoin. 
+Bitcoin prices are extremely volatile due to its high speculative nature. A big part of the trading is backed by emotions and not fundamentals and logic. This project tries to capitalize on this inherently strong sentiment investing that makes up a majority of the trading of bitcoin. 
 
 # Team
 - Diego Munoz
