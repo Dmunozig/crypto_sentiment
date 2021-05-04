@@ -25,13 +25,12 @@ The data was acquired from 3 different API's:
 - Prophet
 # Other model tested:
 - Sarimax
-
 # Deployment
-
-GCP & Heroku
+- GCP & Heroku
 
 # Front-End Web Framework
-Streamlit (link to the repository below)
+Streamlit & link to the repository:
+- https://cryptonite-sentiment.herokuapp.com/
 - https://github.com/Dmunozig/Kryptonite-app
 
 # Project Description
